@@ -5,6 +5,8 @@ var xhr = new XMLHttpRequest();
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
+recognition.lang = 'en-US';
+recognition.maxAlternatives = 1;
 
 //Get all words and sentances from DB
 recognition.onstart = function() {
